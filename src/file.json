@@ -1,0 +1,25 @@
+[ {
+  "id" : 1,
+  "status" : "TODO",
+  "description" : "refactor the task tracker code",
+  "createdAt" : "2026-03-10T13:00:45.205846951",
+  "updatedAt" : "2026-03-10T13:00:45.205846951"
+}, {
+  "id" : 2,
+  "status" : "TODO",
+  "description" : "add the option of storing tasks in a database ",
+  "createdAt" : "2026-03-10T13:01:18.813998880",
+  "updatedAt" : "2026-03-10T13:01:18.813998880"
+}, {
+  "id" : 3,
+  "status" : "TODO",
+  "description" : "make new version of the program for the web with spring boot",
+  "createdAt" : "2026-03-10T13:02:05.101956112",
+  "updatedAt" : "2026-03-10T13:02:05.101956112"
+}, {
+  "id" : 4,
+  "status" : "DONE",
+  "description" : "yassine master de javascript",
+  "createdAt" : "2026-03-10T14:50:43.894660641",
+  "updatedAt" : "2026-03-10T14:51:18.869562641"
+} ]
