@@ -5,7 +5,9 @@ import com.fasterxml.jackson.databind.*;
 
 public class Task_cli {
     public static void main(String[] args) throws IOException {
-        TaskManager taskManager= new TaskManager();
+        String path ="/home/alichliyah/IdeaProjects/Task Tracker/src/file.json";
+        JsonRepo repo= new JsonRepo(path);
+        TaskManager taskManager= new TaskManager(repo);
         if (args.length==0){
             System.exit(1);
         }

@@ -9,24 +9,30 @@ import java.util.*;
 public class TaskManager {
     private List<Task> tasks;
     private File json_file;
+    private Repo repository;
     private ObjectMapper objectMapper;
-    public TaskManager()throws IOException{
-        json_file = new File("/home/alichliyah/IdeaProjects/Task Tracker/src/file.json");
-        objectMapper = new ObjectMapper();
-        if (json_file.exists() && json_file.length()>0){
-            tasks= objectMapper.readValue(json_file,new TypeReference<List<Task>>(){});
-            syncIdCounter();
-        }
-        else {
-            tasks = new ArrayList<Task>();
-        }
+    //public TaskManager()throws IOException{
+    //    json_file = new File("/home/alichliyah/IdeaProjects/Task Tracker/src/file.json");
+    //    objectMapper = new ObjectMapper();
+    //    if (json_file.exists() && json_file.length()>0){
+    //        tasks= objectMapper.readValue(json_file,new TypeReference<List<Task>>(){});
+    //        syncIdCounter();
+    //    }
+    //    else {
+    //        tasks = new ArrayList<Task>();
+    //    }
+    //}
+    public TaskManager(Repo repository) throws IOException {
+        this.repository= repository;
+        this.tasks= repository.loadAll();
+        syncIdCounter();
     }
     public void add(Task task) throws IOException {
         tasks.add(task);
         save();
     }
     private void save()throws IOException{
-        objectMapper.writerWithDefaultPrettyPrinter().writeValue(json_file,tasks);
+        repository.save(tasks);
     }
     public void mark(int id,String status) throws IOException {
         status = status.toUpperCase();
