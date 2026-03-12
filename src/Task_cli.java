@@ -6,14 +6,17 @@ import com.fasterxml.jackson.databind.*;
 public class Task_cli {
     public static void main(String[] args) throws IOException {
         String path ="/home/alichliyah/IdeaProjects/Task Tracker/src/file.json";
-        JsonRepo repo= new JsonRepo(path);
-        TaskManager taskManager= new TaskManager(repo);
-        if (args.length==0){
-            System.exit(1);
-        }
-        String command ;
-        command = args[0].toLowerCase();
+
+
         try {
+            JsonRepo repo= new JsonRepo(path);
+            TaskManager taskManager= new TaskManager(repo);
+            if (args.length==0){
+                manual();
+                return;
+            }
+            String command ;
+            command = args[0].toLowerCase();
             switch (command){
                 //adding a task
                 case "add" ->{
@@ -105,5 +108,14 @@ public class Task_cli {
             System.out.println("Error:"+e.getMessage());
         }
 
+    }
+    public static void manual(){
+        System.out.println("HOW TO USE");
+        System.out.println("task [add|update|mark|remove|list");
+        System.out.println("task add 'description'");
+        System.out.println("task update ID/number of task  'description'");
+        System.out.println("task mark ID/number of task 'status' (status: todo,done,in_progress)");
+        System.out.println("task remove ID");
+        System.out.println("task list 'status' (list all the tasks when no status is given)");
     }
 }
