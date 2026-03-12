@@ -111,10 +111,10 @@ public class Task_cli {
     }
     public static void manual(){
         System.out.println("HOW TO USE");
-        System.out.println("task [add|update|mark|remove|list");
+        System.out.println("task [add|update|mark|remove|list] [arguments]");
         System.out.println("task add 'description'");
-        System.out.println("task update ID/number of task  'description'");
-        System.out.println("task mark ID/number of task 'status' (status: todo,done,in_progress)");
+        System.out.println("task update ID/number_of_task  'description'");
+        System.out.println("task mark ID/number_of_task 'status' (status: todo,done,in_progress)");
         System.out.println("task remove ID");
         System.out.println("task list 'status' (list all the tasks when no status is given)");
     }
