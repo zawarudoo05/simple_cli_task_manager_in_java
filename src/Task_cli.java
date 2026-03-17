@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.*;
 
 public class Task_cli {
     public static void main(String[] args) throws IOException {
-        String path ="/home/alichliyah/IdeaProjects/Task Tracker/src/file.json";
+        String path ="file.json";
 
 
         try {

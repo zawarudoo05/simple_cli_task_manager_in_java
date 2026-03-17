@@ -9,7 +9,13 @@ public class JsonRepo implements Repo{
     private File json_file;
     private ObjectMapper objectMapper;
     public JsonRepo(String path){
-        json_file = new File(path);
+
+        File parent_direcotry = new File("DATA");
+        if (!parent_direcotry.exists()){
+            parent_direcotry.mkdirs();
+        }
+
+        json_file = new File(parent_direcotry,path);
         objectMapper = new ObjectMapper();
     }
 

@@ -92,7 +92,7 @@ public class TaskManager {
             }
         }
         if (isEmpty){
-            System.out.println("0 (there's no tasks with the status: "+targeted_status+")");
+            System.out.println(": 0 (there's no tasks with the status: "+targeted_status+")");
         }
     }
 }

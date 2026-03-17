@@ -48,7 +48,7 @@ public class temp {
         //mapper.writeValue(new FileOutputStream("src/test.json"),taskList);
 
         //testing the TaskManager class
-        TaskManager manager= new TaskManager();
+        //TaskManager manager= new TaskManager();
         //manager.add(task1);
         //manager.add(task2);
             //marking a test as done
@@ -58,6 +58,6 @@ public class temp {
         //manager.updateTaskbyId(2,"updating the task");
         //Task task3= new Task("making list methods");
         //manager.deleteTask(1);
-        manager.listAll();
+        //manager.listAll();
     }
 }
